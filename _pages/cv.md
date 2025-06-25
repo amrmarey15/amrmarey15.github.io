@@ -62,4 +62,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Independent tutor with experience tutoring students ranging from Grade 3 to undergraduates.
