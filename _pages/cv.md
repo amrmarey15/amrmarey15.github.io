@@ -8,8 +8,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-* <a href="https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf">CV in PDF Form</a> 
+<a href="https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf">CV in PDF Form</a> 
 ======
+
 Education
 ======
 * M.S. in Electrical Engineering, University of Alberta, 2025 (Expected)
