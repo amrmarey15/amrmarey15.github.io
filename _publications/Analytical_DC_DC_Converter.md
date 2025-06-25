@@ -8,7 +8,7 @@ date: 2022-09-29
 venue: 'Electronics'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://www.mdpi.com/2079-9292/11/19/3121'
-bibtexurl: 'http://academicpages.github.io/files/electronics_DC_DC.bib'
+bibtexurl: 'http://amrmarey15.github.io/files/electronics_DC_DC.bib'
 citation: 'A. Marey, M. S. Bhaskar, D. Almakhles, and H. Mostafa, ‘Analytical Solution for Transient Reactive Elements for DC-DC Converter Circuits’, Electronics, vol. 11, no. 19, 2022.'
 ---
 

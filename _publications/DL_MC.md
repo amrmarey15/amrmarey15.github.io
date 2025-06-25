@@ -8,7 +8,7 @@ date: 2022-09-17
 venue: 'Micromachines'
 #slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
 paperurl: 'https://www.mdpi.com/2072-666X/13/9/1533'
-bibtexurl: 'http://academicpages.github.io/files/micromachines_MC.bib'
+bibtexurl: 'http://amrmarey15.github.io/files/micromachines_MC.bib'
 citation: 'A. Marey, M. Marey, and H. Mostafa, ‘Novel Deep-Learning Modulation Recognition Algorithm Using 2D Histograms over Wireless Communications Channels’, Micromachines, vol. 13, no. 9, 2022.'
 ---
 
