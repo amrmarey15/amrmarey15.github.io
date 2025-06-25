@@ -8,9 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-======
-<a href="https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf">CV in PDF Form</a> 
-
+<a href="https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf" style="font-size: 10px;">CV in PDF Form</a>
 
 Education
 ======
