@@ -8,7 +8,7 @@ author_profile: true
 <section aria-labelledby="title">
   <h2 id="title">
     <a href="https://amrmarey15.github.io/files/MPC_RobotArm.pdf" target="_blank" rel="noopener noreferrer">
-      Project I: Exploring Nonlinear Model Predictive Control inTwo-Link Robot Arm Motion Planning
+      Project I: Exploring Nonlinear Model Predictive Control in Two-Link Robot Arm Motion Planning
     </a>
   </h2>
   <ul>
@@ -25,3 +25,71 @@ author_profile: true
     <li>Future work: real robot testing, adaptive horizons, moving obstacles, robustness to non-ideal dynamics.</li>
   </ul>
 </section>
+
+
+<section aria-labelledby="ppo-title">
+  <h2 id="ppo-title">PPO with Compressed RGB Inputs for Robotic Grasping Problem</h2>
+
+  <h3>Goal</h3>
+  <p>
+    Explore whether variational auto-encoders (VAEs) and &beta;-VAEs can compress high-dimensional RGB inputs into useful
+    latent representations for a PPO agent in a robotic grasping task.
+  </p>
+
+  <h3>Method</h3>
+  <ul>
+    <li>Collected ~111k RGB images from a simulated Kuka grasping environment.</li>
+    <li>Trained multiple VAEs/&beta;-VAEs with varying latent dimensions (1–1000) and &beta; values (0.1, 1, 10).</li>
+    <li>Used compressed latent vectors as input to PPO agents and compared against a baseline PPO trained on raw images.</li>
+  </ul>
+
+  <h3>Results</h3>
+  <ul>
+    <li><strong>Baseline PPO:</strong> mean reward &asymp; 0.42.</li>
+    <li><strong>Best performance:</strong> latent dimension = 10, &beta; = 0.1 &rarr; mean reward &asymp; 0.54.</li>
+    <li>Smaller latent spaces (dim = 2) were stable across &beta; values.</li>
+    <li>Larger latent dimensions degraded with higher &beta;.</li>
+    <li>&beta;-VAEs sometimes outperformed standard VAEs.</li>
+  </ul>
+
+  <!-- Optional compact table summary -->
+  <figure>
+    <figcaption>Score summary</figcaption>
+    <table>
+      <thead>
+        <tr>
+          <th>Setup</th>
+          <th>Latent Dim</th>
+          <th>&beta;</th>
+          <th>Mean Reward</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Baseline PPO (raw RGB)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>&asymp; 0.42</td>
+        </tr>
+        <tr>
+          <td>Best VAE/&beta;-VAE</td>
+          <td>10</td>
+          <td>0.1</td>
+          <td>&asymp; 0.54</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>Discussion</h3>
+  <ul>
+    <li>VAEs can improve PPO performance but do not guarantee faster convergence.</li>
+    <li>Trade-offs exist between latent size, disentanglement (&beta;), and policy learning stability.</li>
+  </ul>
+
+  <h3>Future Work</h3>
+  <p>
+    Test with other RL algorithms, more complex tasks, real robots, and deeper analysis of latent representations.
+  </p>
+</section>
+
