@@ -15,7 +15,7 @@ main:
     url: /publications/    
 
   - title: "CV"
-    url: href: ""https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf"
+    url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
