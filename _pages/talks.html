@@ -5,25 +5,15 @@ permalink: /talks/
 author_profile: true
 ---
 
-### Project I: Exploring Nonlinear Model Predictive Control in Two-Link Robot Arm Motion Planning \n
-
-[Final Report](https://amrmarey15.github.io/files/MPC_RobotArm.pdf)
-
-- Explores nonlinear MPC for motion planning in a two-link robot arm.
-- **Two strategies tested:**
-  - Long prediction horizon → better accuracy, higher computation
-  - Terminal state constraints → shorter horizon, lower computation, but feasibility issues.
-- Both methods achieved the target (some failure cases discussed) while respecting constraints.
-- Results highlight trade-offs between performance vs. computational cost.
-- **Future work:** real robot testing, adaptive horizons, moving obstacles, robustness to non-ideal dynamics.
-
+---
+title: "Talk 1 on Relevant Topic in Your Field"
+collection: talks
+type: "Talk"
+permalink: /talks/2012-03-01-talk-1
+venue: "UC San Francisco, Department of Testing"
+date: 2012-03-01
+location: "San Francisco, CA, USA"
 ---
 
-### Project II: PPO with Compressed RGB Inputs for Robotic Grasping
+This is a description of your talk, which is a markdown file that can be all markdown-ified like any other post. Yay markdown!
 
-[Final Report](https://amrmarey15.github.io/files/PPO.pdf)
-
-- Tests VAEs and β-VAEs as state compression for PPO in a simulated Kuka grasping task.
-- Dataset of 111k RGB images; autoencoders trained with latent dims 1–1000 and β ∈ {0.1, 1, 10}; PPO uses latent vectors instead of 48×48×3 images.
-- **Results:** best at latent dim = 10, β = 0.1 (mean reward 0.54 vs 0.42 baseline); small latents stable; large latents struggled with high β.
-- **Conclusion:** Latent compression can improve PPO efficiency, with trade-offs between representation size, β regularization, and convergence stability.
