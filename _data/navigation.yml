@@ -14,20 +14,9 @@ main:
   - title: "Publications"
     url: /publications/    
 
-  - title: "Blog Posts"
-    url: /year-archive/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Teaching"
-    url: /teaching/
-    
   - title: "CV"
-    url: /cv/
+    url: href: ""https://amrmarey15.github.io/files/Amr_Marey_Resume.pdf"
     
   # - title: "CV"
   #   url: /cv-json/
-    
-  - title: "YouTube"
-    url: /markdown/
+
