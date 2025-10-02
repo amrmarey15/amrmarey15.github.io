@@ -25,3 +25,10 @@ Project II: PPO with Compressed RGB Inputs for Robotic Grasping Problem
 
 <a href="https://amrmarey15.github.io/files/PPO.pdf" style="font-size: 16px;">Final Report</a>
 
+* The paper tests VAEs and β-VAEs as state compression methods for PPO in a simulated Kuka robotic grasping task.
+
+* A dataset of 111k RGB images was collected; multiple auto-encoders with varying latent dimensions (1–1000) and β values (0.1, 1, 10) were trained. PPO agents then learned policies using these compressed latent vectors instead of raw 48×48×3 images.
+
+* Results: Best performance at latent dim = 10, β = 0.1, improving mean reward from 0.42 (baseline) to 0.54; small latent spaces were stable, while large ones suffered with high β.
+
+* Conclusion: Latent compression can improve PPO efficiency, though trade-offs exist between representation size, β regularization, and convergence stability.
