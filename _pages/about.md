@@ -7,8 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a robotics engineer specializing in motion planning, control, and intelligent automation. My work focuses on developing algorithms and systems that enable robots to operate reliably in complex, dynamic environments. From trajectory optimization and reinforcement learning to computer vision and generative AI, I combine advanced methods with practical engineering to create robots that can perform sophisticated tasks with precision.
+I am a robotics engineer specializing in motion planning, control, and intelligent automation. Over my MSc, I have worked on the following:
 
-I have designed and implemented planning frameworks for robot arms, including bimanual manipulation setups, where robots must coordinate in real time to handle delicate or constrained tasks. My projects span areas such as medical robotics, autonomous grasping, and learning-based trajectory generation, all of which emphasize safe, efficient, and adaptive robot behavior.
+1- Explored Optimization-based Motion Planning through [Graphs of Convex Sets (GCS)](https://arxiv.org/abs/2205.04422). For one side project in my MSc, I used GCS to plan trajectories for automating shoe lacing usinng a bimanual robot arm setup.
+2- Developed an sampling-based motion planning algorithm that aims to minimize re-planning in dynamic environments
+3- Used Diffusion Policy to train a policy for medical suturing for a bimanual robot arm setup.
+4- Finetuned [OpenVLA](https://openvla.github.io/) to develop language-conditioned policy for blood suctioning.
 
-With a strong technical foundation in Python, C++, ROS, and MATLAB, I build end-to-end robotic systems—from algorithm design to simulation and hardware integration. I enjoy working on projects where I can bring together control theory, machine learning, and embedded design to create robots that move from research prototypes into real-world applications.
+I have done some projects concerning reinforcement learning, optimal control, and as well previously embedded systems and power electronics.
+
+Outside of my professional career, I enjoy chess, reading history, and lifting weights.
