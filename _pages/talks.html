@@ -5,10 +5,19 @@ permalink: /talks/
 author_profile: true
 ---
 
-<p><a href="https://amrmarey15.github.io/files/MPC_RobotArm.pdf">Final Report</a></p>
-
-Meh Test123
-
-REEEE xxx
-
-MQQQ
+<section aria-labelledby="title">
+  <h2 id="title">Nonlinear MPC Summary (Two-Link Robot Arm)</h2>
+  <ul>
+    <li>Explores nonlinear MPC for motion planning in a two-link robot arm.</li>
+    <li>
+      Two strategies tested:
+      <ul>
+        <li>Long prediction horizon &rarr; better accuracy, higher computation.</li>
+        <li>Terminal state constraints &rarr; shorter horizon, lower computation, but feasibility issues.</li>
+      </ul>
+    </li>
+    <li>Both methods achieved the target while respecting constraints.</li>
+    <li>Results highlight trade-offs between performance vs. computational cost.</li>
+    <li>Future work: real robot testing, adaptive horizons, moving obstacles, robustness to non-ideal dynamics.</li>
+  </ul>
+</section>
