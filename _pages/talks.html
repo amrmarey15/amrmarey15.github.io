@@ -126,3 +126,41 @@ author_profile: true
   </p>
 </section>
 
+
+<section aria-labelledby="avd-title">
+  <h2 id="avd-title">
+    <a href="https://amrmarey15.github.io/files/AVD.pdf" target="_blank" rel="noopener noreferrer">
+      Automatic Violence Detection through Skeletal-Estimation Based Deep Learning and Video Data Augmentation
+    </a>
+  </h2>
+
+  <h3>Goal</h3>
+  <p>
+    Improve automatic violence detection (AVD) models’ robustness to noise distortions in surveillance video streams.
+  </p>
+
+  <h3>Approach</h3>
+  <ul>
+    <li>Baseline model uses a two-stream ConvLSTM (RGB + change detection) with OpenPose for skeletal estimation.</li>
+    <li>
+      Proposed data augmentation (DA) strategy applies horizontal flipping, brightness scaling, and noise injection
+      (Gaussian + salt &amp; pepper) to training videos.
+    </li>
+    <li>Training used the RWF-2000 surveillance dataset with added DA videos (5,600 extra samples).</li>
+  </ul>
+
+  <h3>Results</h3>
+  <ul>
+    <li><strong>Accuracy (clean data):</strong> Baseline 87.00%; DA model 87.25%.</li>
+    <li><strong>Gaussian noise (σ &gt; 4):</strong> DA model achieved ~10.35% higher accuracy on average than baseline.</li>
+    <li><strong>Salt &amp; pepper noise:</strong> DA model averaged ~9.83% higher accuracy.</li>
+    <li><strong>Conclusion:</strong> Data augmentation significantly improves noise robustness of AVD models without altering architecture.</li>
+  </ul>
+
+  <h3>Future Work</h3>
+  <ul>
+    <li>Explore GAN-based augmentation.</li>
+    <li>End-to-end OpenPose training.</li>
+    <li>Application to more challenging real-world settings.</li>
+  </ul>
+</section>
