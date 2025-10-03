@@ -130,7 +130,7 @@ author_profile: true
 <section aria-labelledby="avd-title">
   <h2 id="avd-title">
     <a href="https://amrmarey15.github.io/files/AVD.pdf" target="_blank" rel="noopener noreferrer">
-      Automatic Violence Detection through Skeletal-Estimation Based Deep Learning and Video Data Augmentation
+      Project III: Automatic Violence Detection through Skeletal-Estimation Based Deep Learning and Video Data Augmentation
     </a>
   </h2>
 
@@ -163,4 +163,53 @@ author_profile: true
     <li>End-to-end OpenPose training.</li>
     <li>Application to more challenging real-world settings.</li>
   </ul>
+</section>
+
+<section aria-labelledby="boost-title">
+  <h2 id="boost-title">
+    <a href="https://amrmarey15.github.io/files/boost.pdf" target="_blank" rel="noopener noreferrer">
+      Project IV: Exploring the Control of DC–DC Boost Converter
+    </a>
+  </h2>
+
+  <h3>Goal</h3>
+  <p>
+    Design and compare different control strategies (LQR, linear MPC, nonlinear MPC, and Pontryagin’s Minimum Principle)
+    for regulating the output voltage of a DC–DC boost converter (from 3.3&nbsp;V to 5&nbsp;V) while respecting input/state constraints.
+  </p>
+
+  <h3>System Modeling</h3>
+  <ul>
+    <li>Derived state-space model by averaging circuit equations across switch positions.</li>
+    <li>Defined control input as the duty cycle deviation, with equilibrium at the origin.</li>
+    <li>Selected inductor (7.5&nbsp;mH) and capacitor (12&nbsp;&micro;F) values based on ripple constraints and designed state/input bounds.</li>
+  </ul>
+
+  <h3>LQR Control</h3>
+  <ul>
+    <li>Linearized the model around the equilibrium and verified controllability and observability.</li>
+    <li>Computed the Riccati equation and derived optimal gain <code>K = [0.4459, 0.6564]</code>, achieving stable convergence for both linear and nonlinear systems.</li>
+  </ul>
+
+  <h3>Linear MPC</h3>
+  <ul>
+    <li><strong>Approach 1:</strong> Used a long prediction horizon (optimal <em>N</em> &asymp; 16). Larger horizons didn’t improve performance significantly.</li>
+    <li><strong>Approach 2:</strong> Added terminal state constraints, yielding faster convergence and less overshoot compared to Approach&nbsp;1, without needing longer horizons.</li>
+  </ul>
+
+  <h3>Nonlinear MPC</h3>
+  <ul>
+    <li>Using the original nonlinear model with a short horizon (<em>N</em> = 2) outperformed linear MPC, eliminating overshoot and reaching steady state faster.</li>
+  </ul>
+
+  <h3>Pontryagin’s Minimum Principle</h3>
+  <ul>
+    <li>Solved the two-point boundary value problem using collocation to compute optimal state, costate, and control trajectories over a finite horizon.</li>
+  </ul>
+
+  <h3>Key Insight</h3>
+  <p>
+    Nonlinear MPC with short horizons achieved the best performance among all methods; linear MPC with terminal constraints was also effective.
+    Parameter tuning of <em>Q</em> could further improve transient response.
+  </p>
 </section>
