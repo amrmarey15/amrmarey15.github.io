@@ -5,26 +5,56 @@ permalink: /talks/
 author_profile: true
 ---
 
-<section aria-labelledby="title">
-  <h2 id="title">
+<section aria-labelledby="mpc-title">
+  <h2 id="mpc-title">
     <a href="https://amrmarey15.github.io/files/MPC_RobotArm.pdf" target="_blank" rel="noopener noreferrer">
-      Project I: Exploring Nonlinear Model Predictive Control in Two-Link Robot Arm Motion Planning
+      Exploring Nonlinear Model Predictive Control in Two-Link Robot Arm Motion Planning
     </a>
   </h2>
+
+  <h3>Goal</h3>
+  <p>
+    Investigates nonlinear Model Predictive Control (MPC) for motion planning in a two-link robot arm, aiming to improve trajectory efficiency under constraints.
+  </p>
+
+  <h3>Approach</h3>
   <ul>
-    <li>Explores nonlinear MPC for motion planning in a two-link robot arm.</li>
+    <li>Derived robot dynamics using Lagrangian formulation and state-space models.</li>
+    <li>Formulated optimal control problem with state/input constraints.</li>
+    <li>Discretized system for discrete-time MPC.</li>
     <li>
-      Two strategies tested:
+      Explored two MPC strategies:
       <ul>
-        <li>Long prediction horizon &rarr; better accuracy, higher computation.</li>
-        <li>Terminal state constraints &rarr; shorter horizon, lower computation, but feasibility issues.</li>
+        <li><strong>Long prediction horizon (Approach A):</strong> Approximates infinite-horizon MPC.</li>
+        <li><strong>Terminal state constraints (Approach B):</strong> Shorter horizon but requires terminal region condition.</li>
       </ul>
     </li>
-    <li>Both methods achieved the target while respecting constraints.</li>
-    <li>Results highlight trade-offs between performance vs. computational cost.</li>
-    <li>Future work: real robot testing, adaptive horizons, moving obstacles, robustness to non-ideal dynamics.</li>
+  </ul>
+
+  <h3>Results</h3>
+  <ul>
+    <li>Both approaches achieved the target configuration while avoiding obstacles.</li>
+    <li>Longer horizons (Approach A, N = 30) improved accuracy and reduced overshoot but required higher computation.</li>
+    <li>Terminal constraints (Approach B, N = 15, &epsilon; = 0.1) allowed smaller horizons with lower computation, but feasibility issues arose with small &epsilon;.</li>
+    <li>Failure cases showed instability or infeasibility with too small horizons or overly strict terminal constraints.</li>
+  </ul>
+
+  <h3>Discussion</h3>
+  <ul>
+    <li>Trade-off between horizon length and computational complexity.</li>
+    <li>Cost function weights (Q and R) significantly influenced trajectory smoothness vs. energy use.</li>
+    <li>A good initial guess for the optimizer was necessary due to non-convex dynamics.</li>
+  </ul>
+
+  <h3>Future Work</h3>
+  <ul>
+    <li>Apply to real robots or more realistic models.</li>
+    <li>Explore adaptive horizons or minimum-time MPC.</li>
+    <li>Extend to dynamic/moving obstacles.</li>
+    <li>Study robustness under non-ideal effects (e.g., friction).</li>
   </ul>
 </section>
+
 
 
 <section aria-labelledby="ppo-title">
